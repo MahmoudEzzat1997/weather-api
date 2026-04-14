@@ -1,0 +1,2 @@
+"""External Weather API client."""
+
