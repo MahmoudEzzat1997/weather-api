@@ -1,2 +1,0 @@
-"""Weather feature interfaces."""
-

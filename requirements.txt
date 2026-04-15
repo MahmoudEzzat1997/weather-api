@@ -1,2 +1,6 @@
 fastapi
+pydantic-settings
+httpx
 uvicorn[standard]
+fastapi-cache2
+Jinja2

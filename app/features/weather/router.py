@@ -1,2 +1,0 @@
-"""Weather API routes."""
-
