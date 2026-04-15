@@ -42,6 +42,14 @@ GET /weather/cairo => hits same cache entry
 GET /weather/London => gets its own cache entry
 ---
 
+
+## Production Environment 
+1. Distributed Cache (Redis). The current in-memory cache is just for light traffic and doesn't support scaling, so it breaks with multiple workers or containers. Redis would be shared across all instances.
+2. Structured Logging to Replace plain print/default logs with structlog or loguru to get JSON logs with request IDs, timestamps, and context — essential for debugging in production.
+3. Rate Limiting to prevent API abuse and securing the limited quota
+Add per-IP rate limiting (e.g. slowapi) to prevent abuse and protect the upstream WeatherAPI.com quota.
+4. Proper CI/CD pipeline for streamlined development process
+5. Move away from a plain .env file toward a proper secrets manager like Azure Key Vault
 ## Getting Started
 
 ### Prerequisites
